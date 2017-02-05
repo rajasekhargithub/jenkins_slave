@@ -1,7 +1,0 @@
----
-#File roles/RHEL_Deploy_Tomcat/vars/mail.yml
-## Variables used by RHEL_Tomcat role
-RHEL_Tomcat:
-  http_port: 8080
-  https_port: 8443
-  tomcat_version: "8"
