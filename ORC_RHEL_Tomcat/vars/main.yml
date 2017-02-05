@@ -1,0 +1,9 @@
+---
+RHEL_Tomcat:
+  http_port: 8080
+  https_port: 8443
+  tomcat_version: "8"
+
+# vars file for template
+LOCAL_TOMCAT_PATH: /usr/share/tomcat{{ RHEL_Tomcat.tomcat_version }}
+LOCAL_HTML_PATH: testTomcat.html

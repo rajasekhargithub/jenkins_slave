@@ -1,0 +1,12 @@
+* Role Release Notes                                                              *
+*                                                                                 *
+* {RHEL_Deploy_tomcat} -  Ansible role for Tomcat Application Server, version 8   *
+*                                      Installation and                           *
+*				       configuration on a managed VM in Converged *
+*				       Infrastructure (CI)                        *
+* See details at http://axiom JiRa or Stash homepage                              *
+***********************************************************************************
+
+Version 0.0.1.(Build Major Number)-{Build Minor Number} release date: 10 April 2015
+
+1. What's New

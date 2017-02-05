@@ -1,0 +1,12 @@
+---
+- name: Install Tomcat via yum 
+  yum: name={{item}} state=present
+  with_items:
+    - redhat-lsb.x86_64
+    - tomcat{{RHEL_Tomcat.tomcat_version}}
+
+- name: Start Tomcat 
+  service: name=tomcat{{RHEL_Tomcat.tomcat_version}} state=started enabled=yes
+
+- name: Wait for tomcat to start 
+  wait_for: port={{RHEL_Tomcat.http_port}}

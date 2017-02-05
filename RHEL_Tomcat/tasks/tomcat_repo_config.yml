@@ -1,0 +1,4 @@
+---
+# File roles/RHEL_Tomcat/tasks/tomcat_repo_config.yml
+- name: Push Tomcat repo definition to managed VM
+  template: src=../templates/FIS-Axiom-Tomcat-el6-x86_64.repo.j2 dest=/etc/yum.repos.d/FIS-Axiom-Tomcat-el6-x86_64.repo owner=root group=root mode=0644

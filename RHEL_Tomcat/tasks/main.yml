@@ -1,0 +1,25 @@
+---
+##
+## The tasks in the block would execute normally, if there is any error the rescue section
+## would get executed with whatever you need to do to recover from the previous error.
+## The always section runs no matter what previous error did or did not occur in the block and rescue sections.
+## Here we are using rescue block to continue execution of next role in case task failure.
+##
+
+- block:
+  
+  - include: tomcat_repo_config.yml
+    when: ansible_os_family == 'RedHat' 
+
+  - include: tomcat_yum.yml 
+    when: ansible_os_family == 'RedHat' 
+
+  - debug: msg="RHEL_Tomcat Installation Successfull..."
+
+  rescue:
+
+  - debug: msg="RHEL_Tomcat Installation Failed... Continue execution next role..."
+
+  always:
+
+  - debug: msg="End of RHEL_Tomcat Role"
